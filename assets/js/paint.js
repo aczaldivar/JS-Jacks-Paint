@@ -14,20 +14,27 @@ function configureListeners() {
 
 function addOpacity(event) {
     // add appropriate CSS class
+    if (!this.classList.contains('dim')){
+        this.classList.add('dim')
+    }
     getProductInfo(event.target.id); 
-    event.target.id ();    
+      //if 'dim' isn't there add 'dim' to function
 }
 
 function removeOpacity(event) {
      //remove appropriate CSS class
-
+    if (this.classList.contain('dim')){
+        this.classList.remove('dim');
+    }
+    //if 'dim' is present remove it using classList. 
+    
     let element = document.getElementById('color-price');
         element.textContent = '';
         
     let color = document.getElementById('color-name');
         color.textContent = ''; 
 
-    //event.preventDefault();    
+    event.preventDefault();    
 }
 
 function getProductInfo(paintColor) {
