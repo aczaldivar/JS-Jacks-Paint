@@ -1,11 +1,14 @@
 function configureListeners() {
-    let images = document.getElementByID // select img elements  
-
+    let images = document.getElementsByTagName ('img');
+    
+    // select img elements  
+    //get.ElementsByTagName selects the images. 
 
      for (var i = 0; i < images.length; i++) {        
         // iterate over images and add mouseover event listeners 
-        images= document.querySelectorAll()
-
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity,false)
+        document.getElementById(images[i].Id).addEventListener('mouseout', removeOpacity, false)
+    //adjusting transperancy level of the mouse over images 
     } 
 }
 
@@ -77,7 +80,9 @@ function getProductInfo(paintColor) {
             colorName= 'Solid Yellow'
             // set variables for price and color name and invoke a function to update the price 
             break;   
-          default:              
+          default:  
+    paintColor() 
+    getProductInfo()           
     }
 
     function updatePrice(colorName, price)
