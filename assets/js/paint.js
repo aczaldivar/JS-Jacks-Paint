@@ -7,13 +7,14 @@ function configureListeners() {
      for (let i = 0; i < images.length; i++) {        
         // iterate over images and add mouseover event listeners 
         document.getElementById(images[i].id).addEventListener('mouseover', addOpacity,false)
-        document.getElementById(images[i].Id).addEventListener('mouseout', removeOpacity,false)
+        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity,false)
     //adjusting transperancy level of the mouse over images 
     } 
 }
 
 function addOpacity(event) {
-    // add appropriate CSS class
+    // add appropriate CSS class 
+    // level of opacity= dim 
     if (!this.classList.contains('dim')){
         this.classList.add('dim');
     }
